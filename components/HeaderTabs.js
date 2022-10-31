@@ -5,7 +5,7 @@ export default function HeaderTabs() {
   const [activeTab, setActiveTab] = useState('Delivery');
 
   return (
-    <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+    <View style={{flexDirection: 'row', alignSelf: 'center',}} >
       <Headerbutton
         text="Delivery"
         btnColor="black"
@@ -44,7 +44,7 @@ const Headerbutton = props => (
     onPress={() => props.setActiveTab(props.text)}>
     <Text
       style={{
-        color: props.textColor,
+        color: props.activeTab === props.text ? "white" : "black",
         fontSize: 15,
         fontWeight: '900',
       }}>
